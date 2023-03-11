@@ -22,9 +22,9 @@ export function SignIn() {
 
     };
 
+    /* ↓ログインしているかどうかを判定する */
   const [user, setUser] = useState<User | null>(null);
 
-  /* ↓ログインしているかどうかを判定する */
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);

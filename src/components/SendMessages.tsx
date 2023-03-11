@@ -17,11 +17,9 @@ function SendMessages() {
           username: auth.currentUser?.displayName,
       });
       localStorage.setItem(data.id, message)
-      console.log(data.id)
-      console.log(localStorage)
       setMessage("");
     } catch (error) {
-        console.error(error);
+        alert(error);
     }
   }
 

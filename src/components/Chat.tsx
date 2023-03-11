@@ -25,10 +25,10 @@ function Chat() {
 
   }, []);
 
+  /* ↓ログインしているかどうかを判定する */
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
-    /* ↓ログインしているかどうかを判定する */
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
