@@ -1,0 +1,333 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+/* reset end */ 
+
+
+
+body{
+  background-color: rgb(111, 111, 209);
+  color: whitesmoke;
+}
+
+.form{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form{
+    background-color: rgb(70, 69, 70);
+    width: 70%;
+    max-width: 350px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    
+    &-items{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      label{
+        text-transform: capitalize;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      
+      input{
+        padding: 10px;
+        text-transform: capitalize;
+      }
+
+      &-button{
+        width: 100%;
+        padding: 8px;
+        margin-top: 20px;
+        background-color: #1b66a7;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        color: whitesmoke;
+        text-transform: uppercase;
+      }
+    }
+    
+    hr{
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    p{
+      margin: 0;
+    }
+  }
+
+
+}
+
+.chat{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .chat-form{
+    position: relative;
+    background-color: rgba(28, 28, 28, 0.428);
+    width: 100%;
+    max-width: 450px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 600px;
+
+    &-body{
+      height: 556px;
+      overflow: auto;
+
+      .chat-container{
+        &-items{
+          padding-top: 20px;
+        }
+
+        .chat-head{
+          text-align: center;
+
+          h1{
+            font-size: 35px;
+            font-weight: 900; 
+            margin-bottom: 10px;
+            text-transform: capitalize;
+          }
+
+          .subtitle{
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: -0.1em;
+            margin-bottom: 10px;
+          }
+
+          hr{
+            border-top: 1px solid #8f8e8e7c;
+          }
+        }
+
+        .chat-text{
+          display: flex;
+          flex-direction: column;
+          
+          .msg {
+            display: flex; 
+            padding: 15px ;
+            margin-bottom: 20px;
+            border-radius: 3000px;
+            align-items: center;
+            max-width: 250px;
+            word-break: break-all;
+            line-height: 1.3em;
+          }
+
+          .sent {
+            display: flex;
+            flex-direction: column;
+            
+            & .send{
+              background-color: rgb(111, 111, 220);
+              color: whitesmoke;
+              border-top-right-radius: 500px;
+              flex-direction: row-reverse;
+              text-align: end;
+              float: right;
+            }
+
+            .chat-text-name{
+              font-size: 12px;
+              font-weight: 500;
+              margin: 5px 0;
+              float: right;
+            }
+          }
+          
+          .received {
+            display: flex;
+            flex-direction: column;
+            
+            & .send{
+              background-color: rgba(28, 28, 28, 0.679);
+              color: whitesmoke;
+              border-top-left-radius: 500px;
+              flex-direction: row-reverse;
+              float: left;
+            }
+
+            .chat-text-name{
+              font-size: 12px;
+              font-weight: 500;
+              margin: 5px 0;
+              float: left;
+            }
+          }
+
+          &-name{
+            display: flex;
+          }
+        }
+      }
+
+    }
+  
+    .send-message{
+      bottom: 10;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      form{
+        width: 100%;
+      }
+    
+      &-item{
+        display: flex;
+        justify-content: center;
+    
+        input{
+          width: 100%;
+          background-color: rgba(28, 28, 28, 0.679);
+          border: none;
+          padding: 18px;
+          outline: none;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          color: rgba(168, 166, 166, 0.969);
+          font-size: 15px;
+        }
+      }
+    }
+
+    .signout{
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: rgba(28, 28, 28, 0.428);
+    }
+  }
+}
+
+.basic-padding{
+  padding: 0px 30px 0px 30px;
+}
+
+.vertical-padding{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+

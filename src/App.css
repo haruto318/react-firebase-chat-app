@@ -1,0 +1,295 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* reset end */
+body {
+  background-color: rgb(111, 111, 209);
+  color: whitesmoke;
+}
+
+.form {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form form {
+  background-color: rgb(70, 69, 70);
+  width: 70%;
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px black;
+}
+.form h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+}
+.form-container-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-container-items label {
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-container-items input {
+  padding: 10px;
+  text-transform: capitalize;
+}
+.form-container-items-button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 20px;
+  background-color: #1b66a7;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+.form-container hr {
+  width: 100%;
+  margin-bottom: 0;
+}
+.form-container p {
+  margin: 0;
+}
+
+.chat {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat .chat-form {
+  position: relative;
+  background-color: rgba(28, 28, 28, 0.428);
+  width: 100%;
+  max-width: 450px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 600px;
+}
+.chat .chat-form-body {
+  height: 556px;
+  overflow: auto;
+}
+.chat .chat-form-body .chat-container-items {
+  padding-top: 20px;
+}
+.chat .chat-form-body .chat-container .chat-head {
+  text-align: center;
+}
+.chat .chat-form-body .chat-container .chat-head h1 {
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.chat .chat-form-body .chat-container .chat-head .subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.1em;
+  margin-bottom: 10px;
+}
+.chat .chat-form-body .chat-container .chat-head hr {
+  border-top: 1px solid rgba(143, 142, 142, 0.4862745098);
+}
+.chat .chat-form-body .chat-container .chat-text {
+  display: flex;
+  flex-direction: column;
+}
+.chat .chat-form-body .chat-container .chat-text .msg {
+  display: flex;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 3000px;
+  align-items: center;
+  max-width: 250px;
+  word-break: break-all;
+  line-height: 1.3em;
+}
+.chat .chat-form-body .chat-container .chat-text .sent {
+  display: flex;
+  flex-direction: column;
+}
+.chat .chat-form-body .chat-container .chat-text .sent .send {
+  background-color: rgb(111, 111, 220);
+  color: whitesmoke;
+  border-top-right-radius: 500px;
+  flex-direction: row-reverse;
+  text-align: end;
+  float: right;
+}
+.chat .chat-form-body .chat-container .chat-text .sent .chat-text-name {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 5px 0;
+  float: right;
+}
+.chat .chat-form-body .chat-container .chat-text .received {
+  display: flex;
+  flex-direction: column;
+}
+.chat .chat-form-body .chat-container .chat-text .received .send {
+  background-color: rgba(28, 28, 28, 0.679);
+  color: whitesmoke;
+  border-top-left-radius: 500px;
+  flex-direction: row-reverse;
+  float: left;
+}
+.chat .chat-form-body .chat-container .chat-text .received .chat-text-name {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 5px 0;
+  float: left;
+}
+.chat .chat-form-body .chat-container .chat-text-name {
+  display: flex;
+}
+.chat .chat-form .send-message {
+  bottom: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat .chat-form .send-message form {
+  width: 100%;
+}
+.chat .chat-form .send-message-item {
+  display: flex;
+  justify-content: center;
+}
+.chat .chat-form .send-message-item input {
+  width: 100%;
+  background-color: rgba(28, 28, 28, 0.679);
+  border: none;
+  padding: 18px;
+  outline: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: rgba(168, 166, 166, 0.969);
+  font-size: 15px;
+}
+.chat .chat-form .signout {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgba(28, 28, 28, 0.428);
+}
+
+.basic-padding {
+  padding: 0px 30px 0px 30px;
+}
+
+.vertical-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
