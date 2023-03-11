@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# React Firebase Chat App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+このプロジェクトは、FirebaseのAuthenticationとCloud Firestoreを使用して、Reactで作成されたチャットWebアプリケーションです。
 
-## Available Scripts
+## 概要
 
-In the project directory, you can run:
+このアプリケーションは、Firebase Authenticationを使用してユーザーを認証し、Firebase Cloud Firestoreを使用してメッセージをストアします。ログインしているユーザーは、他のログインしているユーザーとメッセージを交換できます。
 
-### `npm start`
+## Firebaseの設定
+1. [Firebase](https://console.firebase.google.com/)にログインし、新しいFirebaseプロジェクトを作成します。
+2. Firebaseのコンソールで、AuthenticationとFirestoreを有効化します。
+3. Firebaseコンソールから、Authenticationを使ってログインできるように設定します。このプロジェクトでは、メールアドレスとパスワードを使用してログインするための設定が必要です。
+4. Firebaseコンソールから、新しいFirestoreデータベースを作成します。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## プロジェクトのセットアップ
+1. このリポジトリをクローンします。
+2. ターミナルで、プロジェクトフォルダーに移動します。
+3. npm installコマンドを使用して、依存関係をインストールします。
+4. 下のコードを参考にfirebase.tsファイルを編集して、Firebaseプロジェクトの設定を更新します。
+```firebase.ts
+import { initializeApp } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
+import { getFirestore } from "firebase/firestore";
 
-### `npm test`
+const FIREBASE_CONFIG = {
+  apiKey:"your-api-key",
+  appId: "your-app-id",
+  authDomain: "your-auth-domain",
+  messagingSenderId: "your-sender-id",
+  projectId: "your-project-id",
+  storageBucket: "your-storage-bucket",
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+const firebaseApp = initializeApp(FIREBASE_CONFIG)
 
-### `npm run build`
+export const db = getFirestore(firebaseApp);
+export const auth = getAuth(firebaseApp)
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## アプリケーションの実行
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. このリポジトリをクローンします。
+2. ターミナルで、プロジェクトフォルダーに移動します。
+3. `npm install`コマンドを使用して、依存関係をインストールします。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## インストールコマンド
+React: `npx create-react-app your-app-name --template typescript`<br>
+React Router: `npm install react-router-dom`<br>
+Firebase: `npm install firebase`<br>
+Firebase React: `npm install react-firebase-hooks`
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
